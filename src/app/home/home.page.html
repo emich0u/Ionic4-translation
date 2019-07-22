@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      {{ 'HOME.title' | translate:params }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+ 
+ 
+  <ion-list>
+    <ion-item>
+      <ion-label>Select Language</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="fr">French</ion-select-option>
+        <ion-select-option value="ar">Arabe</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+ 
+ 
+  
+ 
+ 
 </ion-content>
